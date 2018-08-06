@@ -48,13 +48,8 @@ class FileService @Inject()(sparkService: SparkService) {
     //    path
   }
 
-//  def get(fileName: String, params: Map[String, String]): Unit = {
-//    sparkService.get(filePath(fileName), params)
-//  }
   def get(fileName: String, params: Map[String, Seq[String]]): Unit = {
     sparkService.get(filePath(fileName), params)
   }
-  def get(fName: String, sort: Option[String], filter: Option[String]): Unit = {
-    sparkService.get(filePath(fName), sort, filter)
-  }
+
 }
